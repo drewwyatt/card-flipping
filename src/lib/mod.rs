@@ -1,6 +1,11 @@
+mod models;
+use models::Game;
+
 static NO_SOLUTION: &str = "no solution";
 
 pub fn find_solution(input: &str) -> &str {
+    let game: Game = input.parse().unwrap();
+    println!("cards: {:?}", game.cards);
     NO_SOLUTION
 }
 
